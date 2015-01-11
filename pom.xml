@@ -3,15 +3,34 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ys.professor</groupId>
   <artifactId>Professor</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>services</module>
+    <module>infrastructure</module>
+  </modules>
   <name>Professor</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <hibernate.version>4.3.5.Final</hibernate.version>
+    <junit.version>4.10</junit.version>
+    <hibernate-jpa.version>1.0.1.Final</hibernate-jpa.version>
+    <mysql-connector-java.version>5.1.34</mysql-connector-java.version>
+    <spring.version>4.1.4.RELEASE</spring.version>
+    <mockito.version>1.9.5</mockito.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>${mockito.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

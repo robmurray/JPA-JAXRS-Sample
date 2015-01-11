@@ -14,8 +14,6 @@ public interface RepositoryInterface<T, PK extends Serializable>  {
 
     public void update(T object);
 
-    public void retrieve(PK key);
-
     public T retrieveByID(Class<T> clazz, PK id);
 
     public Set<T> retrieveAll();

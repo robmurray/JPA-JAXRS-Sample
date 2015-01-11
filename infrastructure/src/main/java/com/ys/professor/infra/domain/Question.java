@@ -16,12 +16,19 @@ public class Question {
     @GeneratedValue
     private Long questionId;
     private String description;
+    private String category;
 
     public Question() {
     }
 
+
     public Question(String description) {
         this.description = description;
+    }
+
+    public Question(String description, String category) {
+        this.description = description;
+        this.category = category;
     }
 
     public Long getQuestionId() {

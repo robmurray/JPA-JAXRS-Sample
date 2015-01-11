@@ -28,5 +28,8 @@ public class QuestionService {
 
     }
 
+    public Question retrieveQuestion(Long questionId){
 
+        return questionRepo.retrieveByID(Question.class,questionId);
+    }
 }

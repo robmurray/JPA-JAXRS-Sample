@@ -1,2 +1,3 @@
-com/ys/professor/infra/domain/Question.class
 com/ys/professor/infra/repository/RepositoryInterface.class
+com/ys/professor/infra/repository/QuestionRepository.class
+com/ys/professor/infra/domain/Question.class

@@ -46,13 +46,13 @@ public class QuestionServiceTest {
         Collections.addAll(questionSet,question1, question2, question3);
 
         when(questionRepo.retrieveAll()).thenReturn(questionSet);
-        when(questionRepo.retrieveByID(Question.class,new Long(1))).thenReturn(question1);
+        when(questionRepo.retrieveByID(new Long(1))).thenReturn(question1);
 
     }
 
     @Test
     public void retrieveAllQuestionsTest(){
-        Set<Question>questionSet = this.questionService.retrieveAllQuestions();
+        Collection<Question>questionSet = this.questionService.retrieveAllQuestions();
 
 
         assertTrue(questionSet.size()==3);

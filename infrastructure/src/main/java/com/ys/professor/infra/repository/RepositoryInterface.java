@@ -1,6 +1,7 @@
 package com.ys.professor.infra.repository;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Set;
 
 /**
@@ -14,8 +15,8 @@ public interface RepositoryInterface<T, PK extends Serializable>  {
 
     public void update(T object);
 
-    public T retrieveByID(Class<T> clazz, PK id);
+    public T retrieveByID(PK id);
 
-    public Set<T> retrieveAll();
+    public Collection<T> retrieveAll();
 
 }

@@ -23,8 +23,17 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="infrastructure" />
+        <module name="rest-services" />
         <module name="services" />
+        <module name="simple-service" />
+        <module name="simple-service-webapp" />
+        <module name="test" />
+        <module name="webservices" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rest-services" target="1.8" />
+      <module name="simple-service" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

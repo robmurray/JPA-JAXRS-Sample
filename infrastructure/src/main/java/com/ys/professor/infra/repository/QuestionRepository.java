@@ -21,7 +21,7 @@ public class QuestionRepository implements RepositoryInterface<Question,Long>{
     private EntityManager em = null;
 
     /**
-     * Sets the entity manager.
+     * Sets <></>he entity manager.
      */
     @PersistenceContext
     public void setEntityManager(EntityManager em) {

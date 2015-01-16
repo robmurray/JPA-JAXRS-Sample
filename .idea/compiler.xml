@@ -22,9 +22,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="infrastructure" />
-        <module name="rest-services" />
-        <module name="services" />
+        <module name="prof-infrastructure" />
+        <module name="prof-rs" />
+        <module name="prof-services" />
         <module name="simple-service" />
         <module name="simple-service-webapp" />
         <module name="test" />
@@ -32,6 +32,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="prof-rs" target="1.8" />
       <module name="rest-services" target="1.8" />
       <module name="simple-service" target="1.7" />
     </bytecodeTargetLevel>

@@ -14,39 +14,42 @@
                            http://www.springframework.org/schema/tx
                            http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+
     <context:annotation-config />
 
     <tx:annotation-driven />
 
-    <bean id="transactionManager" 
+    <context:property-placeholder location="classpath:repository.properties" />
+
+
+    <bean id="transactionManager"
           class="org.springframework.orm.jpa.JpaTransactionManager"
           p:entityManagerFactory-ref="entityManagerFactory"/>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/professor" />
-        <property name="username" value="root" />
-        <property name="password" value="root123" />
+        <property name="driverClassName" value="${db.DriverClassName}" />
+        <property name="url" value="${db.URL}" />
+        <property name="username" value="${db.UserName}" />
+        <property name="password" value="${db.Password}" />
     </bean>
-
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="com.ys.professor.infra.domain" />
+        <property name="packagesToScan" value="${rep.packagesToScan}" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
         </property>
         <property name="jpaProperties">
             <props>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
-                <prop key="hibernate.show_sql">false</prop>
-                <prop key="hibernate.format_sql">true</prop>
-                <prop key="hibernate.archive.autodetection">class</prop>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
-                <prop key="hibernate.c3p0.min_size">5</prop>
-                <prop key="hibernate.c3p0.max_size">20</prop>
-                <prop key="hibernate.c3p0.timeout">500</prop>
-                <prop key="hibernate.c3p0.max_statements">50</prop>
-                <prop key="hibernate.c3p0.idle_test_period">2000</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hib.hbm2ddl.auto}</prop>
+                <prop key="hibernate.show_sql">${hib.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hib.format_sql}</prop>
+                <prop key="hibernate.archive.autodetection">${hib.archive.autodetection}</prop>
+                <prop key="hibernate.dialect">${hib.dialect}</prop>
+                <prop key="hibernate.c3p0.min_size">${hib.c3p0.min_size}</prop>
+                <prop key="hibernate.c3p0.max_size">${hib.c3p0.max_size}</prop>
+                <prop key="hibernate.c3p0.timeout">${hib.c3p0.timeout}</prop>
+                <prop key="hibernate.c3p0.max_statements">${hib.c3p0.max_statements}</prop>
+                <prop key="hibernate.c3p0.idle_test_period">${hib.c3p0.idle_test_period}</prop>
             </props>
         </property>
     </bean>

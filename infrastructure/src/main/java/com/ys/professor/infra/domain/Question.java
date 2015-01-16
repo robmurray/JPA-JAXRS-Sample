@@ -1,14 +1,17 @@
 package com.ys.professor.infra.domain;
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Created by rob on 1/6/15.
  */
-
+@XmlRootElement
 @Entity
 @Table(name = "question")
 public class Question {

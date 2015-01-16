@@ -9,17 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>services</artifactId>
+    <artifactId>prof-services</artifactId>
     <packaging>jar</packaging>
-    <properties>
-        <infrastructure.version>1.0-SNAPSHOT</infrastructure.version>
-    </properties>
-
-
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>infrastructure</artifactId>
+            <artifactId>prof-infrastructure</artifactId>
             <version>${infrastructure.version}</version>
         </dependency>
     </dependencies>

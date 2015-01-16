@@ -3,7 +3,6 @@ package com.ys.professor.services;
 import com.ys.professor.infra.domain.Question;
 import com.ys.professor.infra.repository.RepositoryInterface;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
 import static org.junit.Assert.*;
@@ -33,7 +32,7 @@ public class QuestionServiceTest {
 
         MockitoAnnotations.initMocks(this);
         questionService = new QuestionService();
-        questionService.setQuestionRepo(questionRepo);
+        questionService.setQuestionRepository(questionRepo);
 
         question1 = new Question("The original question","philosophy");
         question1.setQuestionId(new Long(1));

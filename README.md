@@ -1,2 +1,2 @@
 # JPA-JAXRS-Sample
-Took a few moment to pull together a few technologies
+playing with jax-rs, spring, jpa, mockito and few other technologies
